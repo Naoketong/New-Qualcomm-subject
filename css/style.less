@@ -1,0 +1,462 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: PingFangSC-Light, 'STHeiti Light', 'helvetica neue', 'hiragino sans gb', arial, 'microsoft yahei ui', 'microsoft yahei', simsun, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.head-section {
+  background-color: #fff;
+  height: 75px;
+  border-bottom: 1px solid #66c176;
+  .head-content {
+    width: 1000px;
+    height: 100%;
+    .head-logo {
+      width: 113px;
+      height: 43px;
+      margin-top: 16px;
+    }
+    .head-nav {
+      float: right;
+      position: relative;
+      a {
+        line-height: 75px;
+        font-size: 12px;
+        color: #666666;
+        vertical-align: middle;
+      }
+      a:nth-child(1) {
+        margin-right: 25px;
+      }
+    }
+    .head-nav:after {
+      content: '';
+      display: inline-block;
+      width: 1px;
+      height: 12px;
+      background-color: #000;
+      position: absolute;
+      top: 32px;
+      left: 37px;
+    }
+  }
+}
+.banner-section {
+  height: 426px;
+  background-image: url(../img/head.png);
+  background-position: center;
+}
+.Navigation-section {
+  background-color: #153188;
+  height: 70px;
+  .Navigation-content {
+    width: 960px;
+    font-size: 0;
+    .Navigation-list{
+      .Navigation-item {
+        display: inline-block;
+        width: 20%;
+        height: 100%;
+        text-align: center;
+        font-size: 16px;
+        color: #ffffff;
+        line-height: 70px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .Navigation-item:hover {
+        background-color: #2d4694;
+      }
+    }
+  }
+}
+.course-intro-section {
+  width: 960px;
+  margin: 0 auto;
+  .course-intro-title {
+    margin: 60px 0 30px 0;
+  }
+  .course-intro-text {
+    font-size: 14px;
+    color: #333333;
+    line-height: 28px;
+    margin-bottom: 57px;
+  }
+}
+.watch-section {
+  width: 960px;
+  padding-top: 50px;
+  .watch-video {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 540px;
+    cursor: pointer;
+    margin-top: 24px;
+    position: relative;
+  }
+  .watch-course-options{
+    width: 100%;
+    padding-top:25px;
+    .watch-title-content{
+      padding-bottom:20px;
+      .watch-title{
+        font-size: 18px;
+        line-height: 18px;
+        color: #333;
+        margin-bottom: 14px;
+      }
+      .watch-subheading{
+        font-size: 12px;
+        line-height: 12px;
+        color: #a0a0a0;
+        span{
+          margin: 0 29px 0 17px
+        }
+
+      }
+    }
+    .watch-course-options{
+      font-size: 0;
+      .watch-course-list{
+        display: inline-block;
+        width: 720px;
+        padding-right:20px;
+        vertical-align: top;
+        .watch-course-item{
+          .watch-course-title{
+            width: 700px;
+            height: 40px;
+            background-color:#f7f7f7;
+            border-top:1px solid #e4e4e4;
+            font-size: 14px;
+            line-height: 40px;
+            color: #333;
+            padding-left:50px;
+            position:relative;
+            }
+            .watch-course-content{
+              width: 700px;
+              height: 40px;
+              background-color:#fff;
+              border-bottom:1px solid #f5f5f5;
+              padding-left:50px;
+              padding-right:20px;
+              a{
+                font-size: 12px;
+                line-height: 40px;
+                color: #666666;
+              }
+              span{
+                float: right;
+                font-size: 12px;
+                line-height: 40px;
+                color: #666666;
+
+              }
+            }
+          
+        }
+        
+      }
+      .watch-course-information{
+        display: inline-block;
+        width: 240px;
+        vertical-align: top;
+        .information-message{
+          h3{
+            font-size: 16px;
+            line-height: 16px;
+            color: #333;
+            margin-bottom:8px;
+          }
+          .message-information{
+            margin:10px 0 10px;
+            font-size: 12px;
+            line-height: 12px;
+            color: #999999;
+            .message-information-contemt{
+              font-size: 12px;
+              color: #666666;
+              margin-left: 12px;
+            }            
+          }
+          .message-information-text{
+            width: 210px;
+            font-size: 12px;
+            color: #737373;
+            line-height: 18px;
+            text-align: left;
+            margin:0;
+          }
+        }
+        .information-Qualcomm-logo{
+          position:relative;
+          left: -4px;
+        }
+        .information-course-label{
+          margin-top: 20px;
+          .course-label-title{
+            margin-bottom:10px;
+            font-size: 12px;
+            line-height: 12px;
+            color: #999999;
+          }
+          .course-label-list{
+            margin-top: 5px;
+            .course-label-item{
+              display: inline-block;
+              width: 98px;
+              height: 20px;
+              background-color:#f7f7f7;
+              font-size: 12px;
+              line-height: 20px;
+              color: #666666;
+              text-align: center;
+              margin-right:5px;
+              margin-top: 5px;
+            }
+            .course-label-item.step-2{
+              width: 61px;
+            }
+            .course-label-item.step-3{
+              width: 41px;
+            }
+            .course-label-item.step-4{
+              width: 41px;
+            }
+          }
+        }
+        .information-technology{
+          padding:16px 0 0 11px;
+          .information-technology-title{
+            font-size: 16px;
+            line-height: 16px;
+            color: #333;
+            margin-bottom: 23px;
+          }
+          .information-technology-item{
+            font-size: 0;
+            height: 45px;
+            margin-bottom: 15px;
+            position:relative;
+            .technology-item-logo{
+              display: inline-block;
+            }
+            .technology-item-text{
+              display: inline-block;
+              font-size: 12px;
+              line-height: 45px;
+              color: #333;
+              vertical-align: top;
+              margin-left: 12px;
+            }
+            .technology-item-text.step-1{
+              line-height: 12px;
+            }
+            .technologybutton-List{
+              display: block;
+              position:absolute;
+              right: 15px;
+              top: 23px;
+              .technologybutton-item{
+                float: right;
+                font-size: 12px;
+                line-height: 25px;
+                background-color:#00b1ff;
+                color: #fff;
+                padding:0 13px;
+                border-radius: 2px;
+                vertical-align: top;
+                margin-right: 10px;
+
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+.teacher-section{
+  margin-top:50px;
+  width: 960px;
+  .teacher-title{
+  margin-bottom: 40px;  
+  }
+  .teacher-carousel-list{
+    font-size: 0;
+    overflow: hidden;
+    position:relative;
+    .teacher-carousel-cut{
+      width: 25px;
+      height: 40px;
+      font-size: 12px;
+      font-weight: 60;
+      line-height: 40px;
+      position:absolute;
+      top:50%;
+      background-color:#e2e6ea;
+      text-align: center;
+    }
+    .teacher-carousel-cut.prev{
+      left: 0;
+    }
+    .teacher-carousel-cut.next{
+      right: 0;
+    }
+    .teacher-carousel-item{
+      display: inline-block;
+      width: 240px;
+      padding-top:10px;
+      text-align: center;
+      .carousel-head{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+      }
+      .carousel-name{
+        font-size: 14px;
+        line-height: 14px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+      .carousel-title{
+        font-size: 12px;
+        line-height: 18px;
+        color: #999999;
+        margin-bottom: 4px;
+      }
+      .carousel-text{
+        width: 200px;
+        font-size: 12px;
+        color: #666666;
+        line-height: 20px;
+      }
+    }
+  }
+}
+.product-section{
+  width: 960px;
+  margin:0 auto;
+  font-size: 0;
+  border-bottom: 1px solid #f5f5f5;
+  margin-top: 50px;
+  .product-title{
+    margin-bottom: 30px;
+  }
+  .product-introduce{
+    display: flex;
+    margin-bottom: 30px;
+    .product-img{
+      img{
+        width: 300px;
+        height: 210px;
+      }
+    }
+    .product-describe{
+      margin-left: 20px;
+      .product-title{
+        font-size: 20px;
+        color: #333333;
+      }
+      .product-text{
+        font-size: 13px;
+        color: #666666;
+        line-height: 23px;
+        margin-bottom: 15px;
+      }
+      .product-button{
+        display: inline-block;
+        font-size: 15px;
+        color: #00a8ff;
+        line-height: 40px;
+        padding:0 36px 0 36px;
+        border:1px solid #00a8ff;
+        border-radius: 3px;
+        margin-right: 15px;
+      }
+      .product-button:hover{
+        background-color: #00a8ff;
+        color: #fff;
+      }
+      .correlation-product{
+        margin-top: 25px;
+        span{
+          font-size: 15px;
+          color: #666666;
+          margin-right: 11px;
+        }
+        .correlation-product-item{
+          display: inline-block;
+          width: 196px;
+          text-align: center;
+          font-size: 12px;
+          color: #1c7c89;
+          background-color: #caeaef;
+          line-height: 30px;
+          border-radius: 50px;
+          margin-right:10px;
+        }
+      }
+    }
+  }
+}
+.user-example-section{
+  width: 960px;
+  margin:0 auto;
+  font-size: 0;
+  margin-top: 30px;
+  border-bottom: 1px solid #f5f5f5;
+  .user-example-item{
+    display: inline-block;
+    margin: 0 30px 30px 0;
+  }
+  .user-example-item:nth-child(3){
+    margin-right: 0px;
+  }
+}
+.about-Qualcomm-section{
+  width: 960px;
+  margin:0 auto;
+  font-size: 0;
+  .about-Qualcomm-title{
+    margin-top:30px;
+  }
+  .interflow-list{
+    margin-top:50px;
+    margin-bottom: 35px;
+    .interflow-conent-item{
+      display: inline-block;
+      width: 320px;
+      text-align: center;
+      vertical-align: top;
+      .interflow-item-title{
+        font-size: 14px;
+        color:#333333; 
+        margin:22px 0 13px;
+      }
+      .interflow-item-text{
+        font-size: 12px;
+        color: #a8a8a8;
+        margin-bottom: 15px;
+      }
+      .add-group{
+        display: inline-block;
+        font-size: 14px;
+        color: #fff;
+        line-height: 32px;
+        padding:0 18px 0 18px;
+        border-radius: 3px;
+        background-color: #00a8ff;
+      }
+    }
+  }
+}
