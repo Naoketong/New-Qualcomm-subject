@@ -139,14 +139,17 @@ a {
   color: #333;
   padding-left: 50px;
   position: relative;
+  cursor: pointer;
 }
 .watch-section .watch-course-options .watch-course-options .watch-course-list .watch-course-item .watch-course-content {
   width: 700px;
-  height: 40px;
+  height: 0px;
   background-color: #fff;
   border-bottom: 1px solid #f5f5f5;
   padding-left: 50px;
   padding-right: 20px;
+  overflow: hidden;
+  transform: all .2s ease;
 }
 .watch-section .watch-course-options .watch-course-options .watch-course-list .watch-course-item .watch-course-content a {
   font-size: 12px;
@@ -158,6 +161,9 @@ a {
   font-size: 12px;
   line-height: 40px;
   color: #666666;
+}
+.watch-section .watch-course-options .watch-course-options .watch-course-item.active .watch-course-content {
+  height: 40px;
 }
 .watch-section .watch-course-options .watch-course-options .watch-course-information {
   display: inline-block;

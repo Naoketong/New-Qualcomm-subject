@@ -5,7 +5,6 @@ const PAGE = {
 	  isLock:false,
 	  teachItemLength:null,
 	  teachItemWidth:null,
-	  // teachItem:null,
 	  translateX: 0,
 	},
 	init:function(){
@@ -15,8 +14,20 @@ const PAGE = {
 	bind:function(){
 		let teachPrev = document.getElementById('teacher-content-prev');
 		let teachNext = document.getElementById('teacher-content-next');
-		teachPrev.addEventListener('click',this.teachPrev);//addEventListener
+		let watchTitle = document.getElementsByClassName('watch-course-title');
+		for(let i = 0;i<watchTitle.length;i++){
+			watchTitle[i].addEventListener('click',this.watchTitle)
+		}
+		teachPrev.addEventListener('click',this.teachPrev);
 		teachNext.addEventListener('click',this.teachNext);
+	},
+	watchTitle:function(e){
+		let index = e.target.parentNode;
+		if(index.className === 'watch-course-item'){
+			index.className = 'watch-course-item active'
+		}else{
+			index.className = 'watch-course-item'
+		}
 	},
 	clone:function(){
 		let teachItem = document.getElementsByClassName('teacher-carousel-item');
