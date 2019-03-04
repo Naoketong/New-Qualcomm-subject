@@ -6,6 +6,11 @@ const PAGE = {
 	  teachItemLength:null,
 	  teachItemWidth:null,
 	  translateX: 0,
+	  sectionId: ['roll-1','roll-2','roll-3','roll-4','roll-5'],
+    activeId: '',
+    fixed: false,
+    fixedTop: 460,
+    Height: 80,
 	},
 	init:function(){
 		this.clone();
@@ -20,7 +25,60 @@ const PAGE = {
 		}
 		teachPrev.addEventListener('click',this.teachPrev);
 		teachNext.addEventListener('click',this.teachNext);
+		window.addEventListener('scroll',this.refreshNavigator);
+		let navigatorBar = document.getElementById('Navigation-section');
+		this.onEventLister(navigatorBar,'click','Navigation-item',this.goNavigator);
 	},
+	onEventLister: function(parentNode,action,childClassName,callback) {
+    parentNode.addEventListener(action,function(e){
+      e.target.className.indexOf(childClassName) >= 0 && callback(e);
+    })
+  },
+	refreshNavigator: function(e) {
+    PAGE.fixedNavigator();
+    PAGE.heightLightNavigator();
+  },
+  fixedNavigator: function() {
+    let scrollTop = document.documentElement.scrollTop;
+    let navigatorBarTop = (PAGE.data.fixedTop + PAGE.data.Height);
+    let fixed = scrollTop >= navigatorBarTop;
+    if( PAGE.data.fixed !== fixed){                                                                                    
+      PAGE.data.fixed = fixed;
+      let navigatorBar = document.getElementById('Navigation-section');
+      if(fixed){
+        navigatorBar.className = 'Navigation-section fixed-top'
+      }else{
+        navigatorBar.className = 'Navigation-section'
+      }
+    }
+  },
+  heightLightNavigator: function() {
+    let scrollTop = document.documentElement.scrollTop;
+    let filterNav = PAGE.data.sectionId.filter( data => {
+      let offsetTop = document.getElementById(data).offsetTop;
+      return scrollTop >= offsetTop - PAGE.data.Height
+    })
+    let activeId = filterNav.length ? filterNav[filterNav.length - 1] : '';
+    if(PAGE.data.activeId !== activeId){
+      PAGE.data.activeId = activeId; 
+      let navigatorBarItems = document.getElementsByClassName('Navigation-item');
+      for (let i = 0; i < navigatorBarItems.length; i++) {
+        let navigatorBarItem = navigatorBarItems[i];
+        let dataNav = navigatorBarItem.dataset.nav;
+        if(dataNav === activeId){
+          navigatorBarItem.className = 'Navigation-item active';
+        }else{
+          navigatorBarItem.className = 'Navigation-item';
+        }
+      }
+    }
+  },
+  goNavigator: function(e) {
+    let id = e.target.dataset.nav;
+    let offsetTop = document.getElementById(id).offsetTop - PAGE.data.Height;
+    document.documentElement.scrollTop = offsetTop;
+  },
+	
 	watchTitle:function(e){
 		let index = e.target.parentNode;
 		if(index.className === 'watch-course-item'){
@@ -37,7 +95,6 @@ const PAGE = {
 			teachItem[i].setAttribute('data-index', i);
 		}
 		PAGE.data.teachItemLength = teachItem.length;
-		console.log(PAGE.data.teachItemLength)
 		let FirstItem = teachItem[0].cloneNode(true)
 		let SecondItem = teachItem[1].cloneNode(true)
 		let ThirdlyItem = teachItem[2].cloneNode(true)

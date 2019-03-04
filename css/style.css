@@ -73,6 +73,13 @@ a {
 .Navigation-section .Navigation-content .Navigation-list .Navigation-item:hover {
   background-color: #2d4694;
 }
+.Navigation-section.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
 .course-intro-section {
   width: 960px;
   margin: 0 auto;
@@ -149,7 +156,7 @@ a {
   padding-left: 50px;
   padding-right: 20px;
   overflow: hidden;
-  transform: all .2s ease;
+  transition: all .2s ease;
 }
 .watch-section .watch-course-options .watch-course-options .watch-course-list .watch-course-item .watch-course-content a {
   font-size: 12px;
